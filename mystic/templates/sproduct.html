@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- =================================================================================== -->
+<!--        Home Page   -->
+<!-- =================================================================================== -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce</title>
+  <!-- Font Awesome Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
+  <!-- Css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <!--  -->
+</head>
+
+<body>
+  <header>
+    <a href="{% url 'index' %}" class="logo"><img src="{% static 'img/logo.png' %}" alt="" class="logo"></a>
+
+    <nav>
+      <ul id="navbar">
+                <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'shop' %}" class="{% if request.resolver_match.url_name == 'shop' %}active{% endif %}">Shop</a></li>
+                <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+                <li id="lg-bag"><a href="{% url 'cart' %}"><i class="fa fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+    </nav>
+    <div id="mobile">
+      <a href="cart.html"><i class="fa fa-bag-shopping"></i></a>
+      <i id="bar" class="fas fa-outdent"></i>
+    </div>
+  </header>
+
+  <!-- ===================== -->
+  <!--   Prodetails Section    -->
+  <!-- ===================== -->
+  <section id="prodetails" class="section-p1">
+    <div class="single-pro-image">
+      <img src="{% static 'img/products/f1.jpg' %}" width="100%" id="MainImg" alt="" />
+
+      <div class="small-img-group">
+        <div class="small-img-col">
+          <img src="{% static 'img/products/f1.jpg' %}" width="100%" class="small-img" alt="" />
+        </div>
+        <div class="small-img-col">
+          <img src="{% static 'img/products/f2.jpg' %}" width="100%" class="small-img" alt="" />
+        </div>
+        <div class="small-img-col">
+          <img src="{% static 'img/products/f3.jpg' %}" width="100%" class="small-img" alt="" />
+        </div>
+        <div class="small-img-col">
+          <img src="{% static 'img/products/f4.jpg' %}" width="100%" class="small-img" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="single-pro-details">
+      <h6>Home / Bracelet</h6>
+      <h4>Crystal Bracelet</h4>
+      <h2>120 MAD</h2>
+      <select>
+        <option>Select Size</option>
+        <option>Small</option>
+        <option>Medium</option>
+      </select>
+      <input type="number" value="1" />
+      <button class="normal">Add To cart</button>
+      <h4>Product Details</h4>
+      <span>The Radiant Crystal Bracelet is crafted with precision from high-quality, genuine crystals. This elegant accessory combines timeless beauty with unmatched sparkle, making it a perfect addition to any outfit. Featuring a durable clasp and a sleek design, and available in a range of dazzling colors, it offers it all in the ultimate eye-catching package.</span>
+    </div>
+  </section>
+
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <p class="heading">Summer Collection New Modern Design</p>
+  <div class="pro-container">
+    <div class="pro">
+      <img src="{% static 'img/products/n1.jpg' %}" alt="" />
+      <div class="des">
+
+        <h5>Bracelet</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h4>120 MAD</h4>
+        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+      </div>
+    </div>
+    <div class="pro">
+      <img src="{% static 'img/products/n2.jpg' %}" alt="" />
+      <div class="des">
+        <h5>Bracelet</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h4>120 MAD</h4>
+        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+      </div>
+    </div>
+    <div class="pro">
+      <img src="{% static 'img/products/n3.jpg' %}" alt="" />
+      <div class="des">
+
+        <h5>Bracelet</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h4>120 MAD</h4>
+        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+      </div>
+    </div>
+    <div class="pro">
+      <img src="{% static 'img/products/n4.jpg' %}" alt="" />
+      <div class="des">
+
+        <h5>Bracelet</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <h4>120 MAD</h4>
+        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ===================== -->
+  <!--   Newsletter    -->
+  <!-- ===================== -->
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+      <h4>Sign Up For Newsletters</h4>
+      <p>
+        Get E-mail updates about our latest shop and
+        <span>special offers.</span>
+      </p>
+    </div>
+    <div class="form">
+      <input type="text" placeholder="Your email adress" />
+      <button class="normal">Sign Up</button>
+    </div>
+  </section>
+
+  <!-- ===================== -->
+  <!-----       Footer -------->
+  <!-- ===================== -->
+<footer class="section-p1">
+        <div class="col">
+            <img src="{% static 'img/logo.png' %}" alt="" class="logo">
+            <h4>Contact</h4>
+            <p><strong>E-mail:</strong> mysticloomcrafts@gmail.com</p>
+            <p><Strong>Phone:</Strong> +212708032140 </p>
+            <div class="icon follow">
+                <h4>Follow US</h4>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/mysticloom.crafts/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="{% static 'img/pay/app.jpg' %}" alt="">
+                <img src="{% static 'img/pay/play.jpg' %}" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="{% static 'img/pay/pay.png' %}" alt="">
+        </div>
+    </footer>
+
+  <!-- =================
